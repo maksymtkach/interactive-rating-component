@@ -1,0 +1,187 @@
+:root {
+    --secondary-text-color: rgb(114, 121, 131);
+    --primary-text-color: rgb(253, 255, 255);
+    --inactive-element-color: rgb(38, 47, 56);
+    --hovered-element-color: rgb(251, 114, 9);
+    --background-radial-gradient: radial-gradient(
+        circle at top,
+        rgb(42, 42, 65) 0%,
+        rgb(27, 27, 38) 100%
+    );
+    --button-text-color: rgb(155, 163, 176);
+    --background-color: rgb(20, 21, 25);
+    --font-family: "Overpass", sans-serif;
+}
+
+body {
+    line-height: 1.2rem;
+    font-size: 0.78rem;
+    font-family: var(--font-family);
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+main {
+    border-radius: 32px;
+    min-width: 250px;
+    max-width: 350px;
+    height: 355px;
+    padding: 34px;
+    background-image: var(--background-radial-gradient);
+}
+
+.text-block {
+    margin: 20px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#rating-state {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+  font-size: 28px;  
+}
+
+p {
+    font-weight: 500;
+    color: var(--secondary-text-color);
+    line-height: 1.5rem;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+h1, h2{
+    margin: 0px;
+    color: var(--primary-text-color);
+}
+
+.button-block {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.rating-button {
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 50%;
+    background-color: rgb(51, 51, 68);
+    color: rgb(222, 224, 246);
+    width: 50px;
+    height: 50px;
+    border: 0px;
+    transition: background-color 300ms ease-in-out;
+}
+
+.active {
+    background-color: var(--primary-text-color);
+    color: rgb(51, 51, 68);
+}
+
+.rating-button:hover {
+    background-color: rgb(212, 129, 22);
+    color: rgb(51, 51, 68);
+    transition: background-color 300ms ease-in-out;
+}
+
+#submit-button {
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+    border-radius: 50px;
+    height: 48px;
+    border: 0px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(51, 51, 68);
+    background-color: var(--hovered-element-color);
+    transition: background-color 300ms ease-in-out;
+}
+
+#submit-button:hover {
+    color: rgb(51, 51, 68);
+    background-color: rgb(255, 255, 255);
+}
+
+.image-block {
+    width: 28px;
+    height: 28px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(51, 51, 68);
+}
+
+img {
+    width: 18px;
+    height: 18px;
+}
+
+.attribution {
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+}
+
+.attribution p {
+    margin: 0;
+    color: rgb(103, 103, 122);
+}
+
+.attribution a {
+    color: rgba(212, 130, 22, 0.647);
+}
+
+#thank-you-image {
+    padding: 20px 0;
+    height: 110px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+#thank-you-state {
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#info-message {
+    font-size: 1rem;
+    padding: 4px 16px;
+    border-radius: 16px;
+    color: rgb(212, 130, 22);
+    background-color: rgb(51, 51, 68);
+}
+
+.centered-text {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+      border-radius: 18px;
+      max-width: 80vw;
+      padding: 24px;
+    }
+
+    #thank-you-state {
+        height: 38vh;
+    }
+
+    .centered-text {
+        width: 90%;
+    }
+  }
